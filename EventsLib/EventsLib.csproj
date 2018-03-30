@@ -48,9 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcService.cs" />
-    <Compile Include="ICalcService.cs" />
-    <Compile Include="ICalcServiceEvents.cs" />
+    <Compile Include="IncrService.cs" />
+    <Compile Include="IIncrService.cs" />
+    <Compile Include="IIncrServiceEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

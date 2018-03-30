@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsLib", "EventsLib\Even
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsLibHost", "EventsLibHost\EventsLibHost.csproj", "{CCAB9CD1-C6C1-4C72-AB9C-50283B4CD2AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsClient", "EventsClient\EventsClient.csproj", "{E83ED481-2C8F-4BE8-B221-9860E30A2B4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsClientPublisher", "EventsClient\EventsClientPublisher.csproj", "{E83ED481-2C8F-4BE8-B221-9860E30A2B4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

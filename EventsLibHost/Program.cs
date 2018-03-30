@@ -14,7 +14,7 @@ namespace EventsLibHost
         static void Main(string[] args)
         {
             //Create ServiceHost
-            ServiceHost host = new ServiceHost(typeof(CalcService));
+            ServiceHost host = new ServiceHost(typeof(IncrService));
             //Start the Service
             host.Open();
 

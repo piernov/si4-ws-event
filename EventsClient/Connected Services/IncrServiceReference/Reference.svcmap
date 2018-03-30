@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="399cbb2f-86b5-475a-a436-00836fbc9544" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="76f797b6-4756-4380-aabd-76a05c24edc8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,12 +19,12 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9011/CalcService/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:9011/IncrService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="225d4d9c-23bb-4093-a693-5b1e7fdd60c9" SourceId="1" SourceUrl="http://localhost:9011/CalcService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5d2aae84-bc3b-4e66-95a2-ab26dae2698b" SourceId="1" SourceUrl="http://localhost:9011/CalcService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5cd7af5a-a93d-4e03-bb3d-a40948bc8a7f" SourceId="1" SourceUrl="http://localhost:9011/CalcService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="7b9e48ed-a642-488e-9d77-bad31de0c10f" SourceId="1" SourceUrl="http://localhost:9011/IncrService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="313187bc-111c-4384-9672-1d5dbb7eb33b" SourceId="1" SourceUrl="http://localhost:9011/IncrService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ff167493-8b7d-41cc-9171-ffb7491326f7" SourceId="1" SourceUrl="http://localhost:9011/IncrService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

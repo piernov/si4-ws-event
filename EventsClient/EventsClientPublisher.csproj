@@ -44,22 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcServiceCallbackSink.cs" />
-    <Compile Include="Connected Services\CalcServiceReference\Reference.cs">
+    <Compile Include="Connected Services\IncrServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="IncrServiceCallbackSink.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\CalcServiceReference\service.wsdl" />
-    <None Include="Connected Services\CalcServiceReference\service.xsd">
+    <None Include="Connected Services\IncrServiceReference\service.wsdl" />
+    <None Include="Connected Services\IncrServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CalcServiceReference\service1.xsd">
+    <None Include="Connected Services\IncrServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -67,16 +67,16 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\CalcServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\IncrServiceReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CalcServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\IncrServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CalcServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\IncrServiceReference\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CalcServiceReference\Reference.svcmap">
+    <None Include="Connected Services\IncrServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

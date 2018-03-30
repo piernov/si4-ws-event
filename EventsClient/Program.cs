@@ -1,40 +1,66 @@
-﻿using System;
+﻿using EventsClient.IncrServiceReference;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EventsClient
 {
     class Program
     {
-        static void Main(string[] args)
+        IncrServiceClient objClient;
+
+        Program()
         {
-            CalcServiceCallbackSink objsink = new CalcServiceCallbackSink();
+            IncrServiceCallbackSink objsink = new IncrServiceCallbackSink();
             InstanceContext iCntxt = new InstanceContext(objsink);
-            CalcServiceReference.CalcServiceClient objClient = new CalcServiceReference.CalcServiceClient(iCntxt);
-            objClient.SubscribeCalculatedEvent();
-            objClient.SubscribeCalculationFinishedEvent();
+            objClient = new IncrServiceClient(iCntxt);
+        }
 
+        void RandomIncr()
+        {
+            Random rand = new Random();
+            while (true)
+            {
+                //objClient.Incr();
+                Thread.Sleep(rand.Next() % 10000); // 10 secs max
+            }
+        }
 
-            double dblNum1 = 1000, dblNum2 = 2000;
+        void RandomDecr()
+        {
+            Random rand = new Random();
+            while (true)
+            {
+                objClient.Decr();
+                Thread.Sleep(1); // 10 secs max
+                Console.WriteLine("miaou");
 
-            objClient.Calculate(0, dblNum1, dblNum2);
+            }
+        }
 
-            dblNum1 = 2000; dblNum2 = 4000;
+        void Run()
+        {
+            objClient.SubscribeUpdatedEvent();
+            objClient.Decr();
 
-            objClient.Calculate(1, dblNum1, dblNum2);
-
-            dblNum1 = 2000; dblNum2 = 4000;
-
-            objClient.Calculate(2, dblNum1, dblNum2);
-
-            dblNum1 = 2000; dblNum2 = 400;
-
-            objClient.Calculate(3, dblNum1, dblNum2);
+            Thread threadIncr = new Thread(RandomIncr);
+            Thread threadDecr = new Thread(RandomDecr);
+            threadIncr.Start();
+            threadDecr.Start();
 
             Console.ReadLine();
+
+            threadIncr.Abort();
+            threadDecr.Abort();
+        }
+
+        static void Main(string[] args)
+        {
+            (new Program()).Run();
         }
     }
 }
